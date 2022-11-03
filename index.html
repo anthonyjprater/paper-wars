@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Changa+One&family=Fredericka+the+Great&family=Heebo:wght@400;700&family=Koulen&family=Oswald:wght@400;700&family=Piedra&family=Public+Sans:wght@700&family=Rubik+Dirt&family=Special+Elite&family=Squada+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/5398a5e1fc.js" crossorigin="anonymous"></script>
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <header class="header" id="header">
+        <nav class="main-nav-wrapper">
+            <div class="container">
+                <div class="header-items">
+                    <div></div>
+                    <div class="mobile-menu-hamburger" id="mobile-menu-hamburger">
+                        <button class="icon-container">
+                            <span id="icon"><i class="fa-solid fa-bars" id="icon"></i></span>
+                        </button>
+                        <div class="mobile-menu" id="mobile-menu">
+                            <span id="exit-mobile-menu"><i class="fa-solid fa-x"></i></span>
+                            <ul class="hamburger-menu-nav" id="hamburger-menu-nav">
+                                <li class="main-nav__menu-item"><a href="index.html">Home</a></li>
+                                <li class="main-nav__menu-item"><a href="team.html">Video</a></li>
+                                <li class="main-nav__menu-item"><button class="menu-btn" id="mobile-synopsis-btn">Synopsis</button></li>
+                                <li class="main-nav__menu-item"><a href="about.html">Credits</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul id="main-menu" class="menu-nav header-item">
+                        <li class="main-nav__menu-item"><a href="index.html">Home</a></li>
+                        <li class="main-nav__menu-item"><a href="team.html">Video</a></li>
+                        <li class="main-nav__menu-item"><button class="menu-btn" id="synopsis-btn">Synopsis</button></li>
+                        <li class="main-nav__menu-item"><a href="about.html">Credits</a></li>
+                    </ul>
+                    <!-- <div class="social-bar-wrapper header-item">
+                        <ul id="socialBar" class="social-bar">
+                            <li class="social-bar__item"><a href="https://www.facebook.com"><i class="fab fa-facebook fa-lg gold"></i></a></li>
+                            <li class="social-bar__item"><a href="https://www.twitter.com"><i class="fab fa-twitter fa-lg gold"></i></a></li>
+                            <li class="social-bar__item"><a href="https://www.instagram.com"><i class="fab fa-instagram fa-lg gold"></i></a></li>
+                            <li class="social-bar__item"><a href="https://www.youtube.com"><i class="fab fa-youtube fa-lg gold"></i></a></li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+      <section class="movie-banner">
+        <div class="banner-container">
+            <img class="banner" src="./assets/paper-wars-image.png" alt="Paper Wars movie poster image">
+        </div>
+      </section>
+      <section class="production">
+        <div>
+            <img src="./assets/hungryfishmedia-logo.png" alt="Hungry Fish Media production company logo">
+        </div>
+        <div>
+            <img src="./assets/PNWRS-logo.png" alt="Branding company logo">
+        </div>
+      </section>
+    </main>
+    <div class="modal" id="modal">
+      <div class="close-modal-btn-container">
+        <button class="modal-close-btn" id="modal-close-btn">X</button>
+      </div>
+      <div class="modal-inner" id="modal-inner">
+        <h2>Synopsis</h2>
+        <div class="modal-text-wrapper" id="modal-text-wrapper">
+          <p class="modal-text">The new film "Paper Makers" tells the story of the modern day paper industry through the eyes of the workers who cultivate sustainable forests, apply technologies that nurture and protect them for years to come, and help create nature-based sustainable products — all in one of America's oldest natural industries.</p>
+          <p>In "Paper Makers", you'll meet the people—foresters, mill workers and engineers—who entered the pulp and paper industry out of a love for our planet and a need to showcase its riches, including:</p>
+          <ul>
+            <li>Alex Singleton, a fiber supply manager works with historically underserved families to help them sustainably manage their land: “Everything that I do depends on healthy forests. … I feel a great sense of pride in watching those young trees develop into a healthy forest.”</li>
+            <li>Jacob Cude, a senior geospatial analyst works with the latest technology to double down on the industry's commitment to minimize the environmental impact of paper production: “Data gives us a perspective, a spatial perspective on how efficiently we should apply our resources, how to be stewards of the environment.”</li>
+            <li>Malisa Maynard, an environmental safety and sustainability professional whose family forestry legacy began three generations ago: “People are starting to realize that paper products are made from a renewable resource making them a very sustainable choice. … When we procure wood from certified sources, we are essentially replanting forests.”</li>
+          </ul>
+          <p>There's new attention on paper and paper-based packaging which help provide everyday solutions that address a variety of environmental challenges and sustainability goals. From food and beverages to personal care and fashion, paper is at the forefront of innovation, providing sustainable, nature-based solutions for tomorrow. "Paper Makers" unearths little-known facts about how the industry comes together to conserve and regenerate important resources. Walk through the forests with these paper makers and witness their stories firsthand to learn why paper is a sustainable choice for the planet.</p>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>PRIVACY</li>
+        <li>TERMS OF USE</li>
+        <li>HUNGRY FISH MEDIA</li>
+        <li>COOKIE SETTINGS</li>
+        <li>CREDITS</li>
+      </ul>
+    </footer>
+  </body>
+</html>

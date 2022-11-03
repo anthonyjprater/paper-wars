@@ -1,0 +1,408 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+    all: unset;
+    display: revert;
+  }
+  
+  /* Preferred box-sizing value */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /*
+    Remove list styles (bullets/numbers)
+    in case you use it with normalize.css
+  */
+  ol, ul {
+    list-style: none;
+  }
+  
+  /* For images to not be able to exceed their container */
+  img {
+    max-width: 100%;
+  }
+  
+  /* Removes spacing between cells in tables */
+  table {
+    border-collapse: collapse;
+  }
+  
+  /* Revert the 'white-space' property for textarea elements on Safari */
+  textarea {
+    white-space: revert;
+  }
+
+/* A11y */
+
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;  /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;            /* 3 */
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+	clip: auto !important;
+	-webkit-clip-path: none !important;
+		clip-path: none !important;
+	height: auto !important;
+	margin: auto !important;
+	overflow: visible !important;
+	width: auto !important;
+	white-space: normal !important;
+}
+
+/*----- TYPOGRAPHY -----*/
+
+
+@font-face {
+  font-family: 'Zerox';
+  src:url('./assets/Zerox.ttf.woff') format('woff'),
+      url('./assets/Zerox.ttf.svg#Zerox') format('svg'),
+      url('./assets/Zerox.ttf.eot'),
+      url('./assets/Zerox.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'Zerox';
+  font-size: 8rem;
+}
+
+/*----- END TYPOGRAPHY -----*/
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    color: black;
+    font-family: 'Anton', sans-serif;
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    gap: 2rem;
+    background: radial-gradient(#9e9999 0%, #516F7E 100%);
+    /* background-image: url('./assets/paper-wars-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+  }
+  
+
+  main {
+    width: 100%;
+    /* background-image: url('./assets/paper-wars-image.png');
+    background-size: contain;
+    background-repeat: no-repeat; */
+    /* background-position: center; */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    /* margin-top: 65px; */
+    /* height: 100vh; */
+  }
+
+
+  section.movie-banner {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 2rem;
+    min-height: 20vh;
+    background-image: url('./assets/paper-wars-logo.png');
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .banner-container img {
+    display: none;
+    width: 100%;
+  }
+
+
+  .production {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+  }
+
+  .production  {
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  
+  /* font-family: 'Anton', sans-serif;
+  
+  font-family: 'Archivo Black', sans-serif;
+  
+  font-family: 'Changa One', cursive;
+  
+  font-family: 'Fredericka the Great', cursive;
+  
+  font-family: 'Heebo', sans-serif;
+  
+  font-family: 'Koulen', cursive;
+  
+  font-family: 'Oswald', sans-serif;
+  
+  font-family: 'Piedra', cursive;
+  
+  font-family: 'Public Sans', sans-serif;
+  
+  font-family: 'Rubik Dirt', cursive;
+  
+  font-family: 'Special Elite', cursive;
+  
+  font-family: 'Squada One', cursive; */
+  
+  a {
+    color: #f8f8f8;
+  }
+  
+  a:hover {
+    color: #073447;
+  }
+  
+  footer {
+    color: #f8f8f8;
+    background-color: #073447;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+  
+  .footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+    column-gap: 25px;
+    list-style: none;
+    font-family: 'Heebo', sans-serif;
+    font-weight: normal;
+    word-wrap: normal;
+  }
+  
+/*----- MODAL STYLES -----*/
+
+  .modal {
+    display: none;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 90vh;
+    width: 90vw;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px 2px #666;
+    background-color: #000000;
+    opacity: 0.9;
+    color: #f8f8f8;
+    overflow: auto;
+  }
+
+  .modal-inner {
+    padding: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .modal-text-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875rem;
+    text-shadow: 1px 1px 3px #0006;
+    overflow: hidden;
+  }
+
+  .modal-inner h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 0px #0006;
+
+  }
+
+  .modal-inner p {
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .modal-inner ul {
+    display: flex;
+    width: 75%;
+    flex-flow: column nowrap;
+    gap: 5px;
+    align-items: center;
+    list-style-type: disc;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+
+/*----- EXIT MODAL STYLES -----*/
+
+  /* Media Queries */
+
+@media screen and (max-width: 1025px) {
+
+    .fa-bars,
+    .fa-x {
+        color: #f8f8f8;
+    }
+
+    #icon {
+        padding: 1.5rem 0 0 0.5rem;
+    }
+
+    #exit-mobile-menu {
+        align-self: flex-start;
+        justify-self: flex-end;
+    }
+  
+    .mobile-menu-hamburger {
+      display: flex;
+      flex-flow: column nowrap;
+      visibility: visible;
+      position: relative;
+      font-size: 3rem;
+      margin-right: 1rem;
+    }
+  
+    .mobile-menu {
+        background: linear-gradient(#9e9999 0%, #516F7E 100%);
+        position: absolute;
+        padding: 0.75rem 0 0 1rem;
+        /* background-color: red; */
+        z-index: 2;
+        display: none;
+        flex-flow: column nowrap;
+    }
+
+    .hamburger-menu-nav {
+      /* position: absolute; */
+      top: 75px;
+      left: 0px;
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1rem;
+      width: 100%;
+      align-items: center;
+      padding: 0.5rem;
+      font-size: 1.5rem;
+      /* background: linear-gradient(#9e9999 0%, #516F7E 100%); */
+      z-index: 1;
+    }
+  
+    .hamburger-menu-nav a:active {
+      border-bottom: 2px solid #37ff14;
+    }
+  
+    .menu-nav {
+      display: none;
+    }
+}
+
+@media screen and (min-width: 844px) {
+    
+    body {
+        /* background-image: url('./assets/paper-wars-logo.png'); */
+        background-size: cover;
+        background-position: top center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .mobile-menu-hamburger {
+        display: none;
+    }
+
+    .header-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 10px;
+    }
+
+    #main-menu {
+        display: flex;
+        width: 100%;
+        font-size: 1rem;
+        justify-content: center;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .main-nav__menu-item {
+        padding: 1rem;
+    }
+
+    .main-nav__menu-item:hover {
+        color: #073447;
+    }
+
+    main {
+
+    }
+
+    .movie-banner {
+      width: 100%;
+      height: 75vh;
+      background-image: url('./assets/paper-wars-logo.png');
+      background-position: top center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .banner-container img {
+      display: none;
+    }
+    
+    .production {
+      width: 50%;
+    }
+
+}
